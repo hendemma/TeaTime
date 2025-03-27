@@ -1,0 +1,29 @@
+<section>
+<h1>Tea Finder</h1>
+<p>Find your next cup using our tea finder.<br/>Follow the steps below, see our tea suggestions, then get sipping!</p>
+<form action="/submit" method="post">
+
+<div class="steps">STEP 1</div>
+<div class="questions">Select the types of tea that you like to drink.</div>
+{{#each type_data}}
+<input type="checkbox" id="{{this.type}}" name="{{this.type}}" value="{{this.type}}">
+<label for="{{this.type}}">{{this.type}}</label><br>
+{{/each}}
+
+<div class="steps">STEP 2</div>
+<div class="questions">Select your favorite flavors.</div>
+{{#each flav_data}}
+<input type="checkbox" id="{{this.flavor_name}}" name="{{this.flavor_name}}" value="{{this.flavor_name}}">
+<label for="{{this.flavor_name}}">{{this.flavor_name}}</label><br>
+{{/each}}
+
+<div class="steps">STEP 3</div>
+<div class="questions">Select your caffeine preferences.</div>
+{{#each caff_data}}
+<input type="checkbox" id="{{this.caffeine}}" name="{{this.caffeine}}" value="{{this.caffeine}}">
+<label for="{{this.caffeine}}">{{this.caffeine}}</label><br>
+{{/each}}
+
+<button type="submit">Submit</button>
+</form>
+</section>

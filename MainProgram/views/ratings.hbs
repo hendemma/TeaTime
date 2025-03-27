@@ -1,0 +1,23 @@
+<section>
+<h1>Rate Teas</h1>
+<p>Loved your last cup? Never want to drink it again? Share your ratings!</p>
+<form action="/ratings_submit" method="post">
+<div class="random_tea">
+<label for="tea">Select the tea: </label>
+<select name="tea" id="tea">
+{{#each data}}
+<option value="{{this.tea_name}}">{{this.tea_name}}</option>
+{{/each}}
+</select>
+<label for="rating">Select the rating: </label>
+<select name="rating" id="rating">
+<option value="5">★★★★★</option>
+<option value="4">★★★★</option>
+<option value="3">★★★</option>
+<option value="2">★★</option>
+<option value="1">★</option>
+</select>
+</div>
+<p><button type="submit">Submit</button></p>
+</form>
+</section>

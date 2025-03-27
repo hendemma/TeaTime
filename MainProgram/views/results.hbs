@@ -1,0 +1,21 @@
+<section>
+<div class="results-heading">
+<h1>Tea Finder Results</h1>
+<div>
+<a href="/finder"><i title="Reset" class="fa-solid fa-rotate-right"></i></a>
+<i title="Print" class="fa-solid fa-print" onclick="window.print()"></i>
+</div>
+</div>
+<div class="all-teas-cnt">
+{{#each data}}
+<div class="tea-cnt">
+<div class="tea-name tea-name-margin">{{this.tea_name}}</div>
+<div class="tea-info">
+<div><span class="tea-info-type">Flavor:</span> {{this.flavor_name}}</div>
+<div><span class="tea-info-type">Caffeine:</span>  {{this.caffeine}}</div>
+<div><span class="tea-info-type">Type:</span> {{this.type}}</div>
+</div>
+</div>
+{{/each}}
+</div>
+</section>
